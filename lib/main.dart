@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web/home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+<<<<<<< HEAD
 
 class HomePage extends StatelessWidget {
   @override
@@ -198,3 +200,5 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+=======
+>>>>>>> 96416e54eddc18f21f82664b5c5b2c4e8909b465
