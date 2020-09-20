@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
                     Container(
                       width: 1280 / 2,
                       height: 832,
-                      color: Colors.red,
+                      color: Colors.white,
                     ),
                     Container(
                       width: 1280 / 2,
@@ -47,10 +47,19 @@ class HomePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      margin: EdgeInsets.only(left: 100),
+                      margin: EdgeInsets.only(left: 60),
                       width: 75,
-                      height: 80,
-                      color: Colors.black,
+                      height: 92,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: <Color>[
+                            Color(0xFFFF6363),
+                            Color(0xFFFC8A8A),
+                          ],
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                        ),
+                      ),
                       child: Center(
                         child: Text("Logo",
                             style: TextStyle(
@@ -59,29 +68,88 @@ class HomePage extends StatelessWidget {
                             )),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       height: 116,
                     ),
                     Container(
-                      width: 500,
-                      height: 400,
+                      margin: EdgeInsets.only(left: 60),
+                      width: 506,
+                      height: 256,
                       color: Colors.white,
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Bersama Melawan Covid-19"),
                           Text(
-                              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"),
+                            "Bersama Melawan \nCovid-19",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                              fontSize: 42,
+                              fontFamily: 'PoppinsBold',
+                              color: Color(0xFF676767),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Text(
+                            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontFamily: 'PoppinsMedium',
+                              color: Color(0xFF676767),
+                            ),
+                          ),
                         ],
                       ),
                     ),
                     SizedBox(
-                      height: 100,
+                      height: 78,
                     ),
                     Container(
-                      width: 221.65,
-                      height: 70,
-                      color: Colors.white,
-                      child: Center(child: Text('Learn More')),
+                      width: 336,
+                      height: 136,
+                      decoration: BoxDecoration(
+                        color: Color(0xFFFDFDFD),
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(10.0),
+                          bottomRight: Radius.circular(10.0),
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.10),
+                            // offset: Offset(0.0, 3.0),
+                            blurRadius: 150.0,
+                          ),
+                        ],
+                      ),
+                      child: Center(
+                        child: Container(
+                          height: 70.31,
+                          width: 221.65,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8.0),
+                            gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: <Color>[
+                                Color(0xFFFF6363),
+                                Color(0xFFFC8A8A),
+                              ],
+                            ),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Learn More',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontFamily: 'PoppinsMedium',
+                                color: Color(0xFFFFFFFF),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     )
                   ],
                 ),
