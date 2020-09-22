@@ -13,9 +13,18 @@ class HomePage extends StatelessWidget {
                 Row(
                   children: [
                     Container(
-                      width: 1280 / 2,
-                      height: 832,
-                      color: Color(0XF7F7F7),
+                      width: 1366,
+                      height: 959,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: <Color>[
+                            Color(0xFFFFFFFF),
+                            Color(0xFFF7F7F7),
+                          ],
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                        ),
+                      ),
                     ),
                     // Container(
                     //   width: 1280 / 2,
@@ -25,20 +34,43 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
                 Positioned(
-                  left: 600,
+                  left: 585,
                   child: Container(
-                    width: 950,
-                    child: Image.asset(
-                      'assets/images/doctor_mask.jpg',
-                      height: 800.0,
-                      fit: BoxFit.cover,
+                    margin: EdgeInsets.only(top: 486),
+                    width: 215,
+                    height: 139,
+                    child: Image.asset('assets/images/pointer_image.png'),
+                  ),
+                ),
+                Positioned(
+                  left: 693,
+                  child: Container(
+                    width: 747,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(40.0),
+                      ),
+                      child: Image.asset(
+                        'assets/images/doctor_mask.jpg',
+                        height: 754.0,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
                 Positioned(
-                  left: -35,
+                  left: -52,
                   child: Container(
-                    margin: EdgeInsets.only(top: 200),
+                    margin: EdgeInsets.only(top: 169),
+                    width: 215,
+                    height: 139,
+                    child: Image.asset('assets/images/pointer_image.png'),
+                  ),
+                ),
+                Positioned(
+                  left: 30,
+                  child: Container(
+                    margin: EdgeInsets.only(top: 811),
                     width: 215,
                     height: 139,
                     child: Image.asset('assets/images/pointer_image.png'),
@@ -207,6 +239,23 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+                Center(
+                  child: Container(
+                    margin: EdgeInsets.only(top:861.0, bottom: 200),
+                    height: 196.0,
+                    width: 1246.0,
+                    decoration: BoxDecoration(
+                        color: Color(0xFFF7F7F7),
+                        borderRadius: BorderRadius.circular(15.0),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.10),
+                            blurRadius: 60.0,
+                          ),
+                        ],
+                      ),
+                  ),
                 ),
               ],
             ),
