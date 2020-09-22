@@ -15,14 +15,34 @@ class HomePage extends StatelessWidget {
                     Container(
                       width: 1280 / 2,
                       height: 832,
-                      color: Colors.white,
+                      color: Color(0XF7F7F7),
                     ),
-                    Container(
-                      width: 1280 / 2,
-                      height: 832,
-                      color: Colors.blue,
-                    ),
+                    // Container(
+                    //   width: 1280 / 2,
+                    //   height: 832,
+                    //   color: Color(0XF7F7F7),
+                    // ),
                   ],
+                ),
+                Positioned(
+                  left: 600,
+                  child: Container(
+                    width: 950,
+                    child: Image.asset(
+                      'assets/images/doctor_mask.jpg',
+                      height: 800.0,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: -35,
+                  child: Container(
+                    margin: EdgeInsets.only(top: 200),
+                    width: 215,
+                    height: 139,
+                    child: Image.asset('assets/images/pointer_image.png'),
+                  ),
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,7 +76,6 @@ class HomePage extends StatelessWidget {
                       margin: EdgeInsets.only(left: 60),
                       width: 506,
                       height: 256,
-                      color: Colors.white,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -139,37 +158,50 @@ class HomePage extends StatelessWidget {
                     )
                   ],
                 ),
+
                 // Sisi Kanan
                 Stack(
                   children: [
                     Container(
-                      margin: EdgeInsets.only(left: 700),
+                      margin: EdgeInsets.only(left: 650, top: 20),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Container(
                             height: 50,
                             width: 100,
-                            color: Colors.white,
-                            child: Center(child: Text("Kontol")),
+                            child: Center(
+                                child: Text(
+                              "Home",
+                              style: TextStyle(color: Colors.white),
+                            )),
                           ),
                           Container(
                             height: 50,
                             width: 100,
-                            color: Colors.white,
-                            child: Center(child: Text("Kontol")),
+                            child: Center(
+                                child: Text(
+                              "Contact",
+                              style: TextStyle(color: Colors.white),
+                            )),
                           ),
                           Container(
                             height: 50,
                             width: 100,
-                            color: Colors.white,
-                            child: Center(child: Text("Kontol")),
+                            child: Center(
+                                child: Text(
+                              "About",
+                              style: TextStyle(color: Colors.white),
+                            )),
                           ),
                           Container(
                             height: 50,
                             width: 100,
-                            color: Colors.white,
-                            child: Center(child: Text("Kontol")),
+                            child: Center(
+                                child: Text(
+                              "Content",
+                              style: TextStyle(color: Colors.white),
+                            )),
                           ),
                         ],
                       ),
@@ -177,7 +209,7 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),
