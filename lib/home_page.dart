@@ -1,8 +1,11 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -13,7 +16,7 @@ class HomePage extends StatelessWidget {
                 Row(
                   children: [
                     Container(
-                      width: 1366,
+                      width: screenSize.width,
                       height: 959,
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
@@ -242,19 +245,19 @@ class HomePage extends StatelessWidget {
                 ),
                 Center(
                   child: Container(
-                    margin: EdgeInsets.only(top:861.0, bottom: 200),
+                    margin: EdgeInsets.only(top: 861.0, bottom: 200),
                     height: 196.0,
                     width: 1246.0,
                     decoration: BoxDecoration(
-                        color: Color(0xFFF7F7F7),
-                        borderRadius: BorderRadius.circular(15.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.10),
-                            blurRadius: 60.0,
-                          ),
-                        ],
-                      ),
+                      color: Color(0xFFF7F7F7),
+                      borderRadius: BorderRadius.circular(15.0),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.10),
+                          blurRadius: 60.0,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
