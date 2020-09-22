@@ -1,10 +1,9 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final dataKey = new GlobalKey();
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
@@ -46,9 +45,9 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  left: 693,
+                  left: screenSize.width / 1.8,
                   child: Container(
-                    width: 747,
+                    width: screenSize.width / 2,
                     child: ClipRRect(
                       borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(40.0),
@@ -142,8 +141,8 @@ class HomePage extends StatelessWidget {
                       height: 78,
                     ),
                     Container(
-                      width: 336,
-                      height: 136,
+                      width: screenSize.width / 4,
+                      height: screenSize.width / 11,
                       decoration: BoxDecoration(
                         color: Color(0xFFFDFDFD),
                         borderRadius: BorderRadius.only(
@@ -160,8 +159,8 @@ class HomePage extends StatelessWidget {
                       ),
                       child: Center(
                         child: Container(
-                          height: 70.31,
-                          width: 221.65,
+                          height: screenSize.height / 14,
+                          width: screenSize.width / 5.2,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.0),
                             gradient: LinearGradient(
@@ -174,14 +173,13 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           child: InkWell(
-                            onTap: () {
-                              print('ancok');
-                            },
+                            onTap: () => Scrollable.ensureVisible(
+                                dataKey.currentContext),
                             child: Center(
                               child: Text(
                                 'Learn More',
                                 style: TextStyle(
-                                  fontSize: 16,
+                                  fontSize: screenSize.width / 75,
                                   fontFamily: 'PoppinsMedium',
                                   color: Color(0xFFFFFFFF),
                                 ),
@@ -198,13 +196,14 @@ class HomePage extends StatelessWidget {
                 Stack(
                   children: [
                     Container(
-                      margin: EdgeInsets.only(left: 650, top: 20),
+                      margin: EdgeInsets.only(
+                          left: screenSize.width / 1.8, top: 20),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Container(
                             height: 50,
-                            width: 100,
+                            width: screenSize.width / 12,
                             child: Center(
                                 child: Text(
                               "Home",
@@ -213,7 +212,7 @@ class HomePage extends StatelessWidget {
                           ),
                           Container(
                             height: 50,
-                            width: 100,
+                            width: screenSize.width / 12,
                             child: Center(
                                 child: Text(
                               "Contact",
@@ -222,7 +221,7 @@ class HomePage extends StatelessWidget {
                           ),
                           Container(
                             height: 50,
-                            width: 100,
+                            width: screenSize.width / 12,
                             child: Center(
                                 child: Text(
                               "About",
@@ -231,7 +230,7 @@ class HomePage extends StatelessWidget {
                           ),
                           Container(
                             height: 50,
-                            width: 100,
+                            width: screenSize.width / 12,
                             child: Center(
                                 child: Text(
                               "Content",
@@ -243,11 +242,13 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
+
+                // Data Recovered n death covid19
                 Center(
                   child: Container(
                     margin: EdgeInsets.only(top: 861.0, bottom: 200),
-                    height: 196.0,
-                    width: 1246.0,
+                    height: 120.0,
+                    width: screenSize.width / 1.08,
                     decoration: BoxDecoration(
                       color: Color(0xFFF7F7F7),
                       borderRadius: BorderRadius.circular(15.0),
@@ -255,6 +256,55 @@ class HomePage extends StatelessWidget {
                         BoxShadow(
                           color: Colors.black.withOpacity(0.10),
                           blurRadius: 60.0,
+                        ),
+                      ],
+                    ),
+                    child: Stack(
+                      children: [
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Center(
+                                  child: Padding(
+                                    key: dataKey,
+                                    padding: EdgeInsets.fromLTRB(
+                                        screenSize.width / 50,
+                                        screenSize.width / 50,
+                                        screenSize.width / 50,
+                                        10),
+                                    child: Stack(
+                                      children: [
+                                        Container(
+                                          width: screenSize.width / 1.15,
+                                          height: screenSize.width / 25,
+                                          color: Colors.red,
+                                          child: Container(
+                                            padding: EdgeInsets.all(
+                                                screenSize.width / 89),
+                                            margin: EdgeInsets.only(left: 950),
+                                            child: Text("9448 Death"),
+                                          ),
+                                        ),
+                                        Container(
+                                          width: screenSize.width / 1.5,
+                                          height: screenSize.width / 25,
+                                          color: Colors.green,
+                                          child: Container(
+                                            padding: EdgeInsets.all(
+                                                screenSize.width / 80),
+                                            child: Text("170.448 Recovered"),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Text(
+                                "Data keseluruhan kasus Covid-19 di Indonesia, sampai tanggal  20 September 2020")
+                          ],
                         ),
                       ],
                     ),
