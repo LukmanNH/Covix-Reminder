@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web/symptom_covid.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -188,66 +189,68 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
 
                 // Sisi Kanan
-                Stack(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(
-                          left: screenSize.width / 1.8, top: 20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(
-                            height: 50,
-                            width: screenSize.width / 12,
-                            child: Center(
-                                child: Text(
-                              "Home",
-                              style: TextStyle(color: Colors.white),
-                            )),
-                          ),
-                          Container(
-                            height: 50,
-                            width: screenSize.width / 12,
-                            child: Center(
-                                child: Text(
-                              "Contact",
-                              style: TextStyle(color: Colors.white),
-                            )),
-                          ),
-                          Container(
-                            height: 50,
-                            width: screenSize.width / 12,
-                            child: Center(
-                                child: Text(
-                              "About",
-                              style: TextStyle(color: Colors.white),
-                            )),
-                          ),
-                          Container(
-                            height: 50,
-                            width: screenSize.width / 12,
-                            child: Center(
-                                child: Text(
-                              "Content",
-                              style: TextStyle(color: Colors.white),
-                            )),
-                          ),
-                        ],
+                Container(
+                  child: Stack(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(
+                            left: screenSize.width / 1.8, top: 20),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Container(
+                              height: 50,
+                              width: screenSize.width / 12,
+                              child: Center(
+                                  child: Text(
+                                "Home",
+                                style: TextStyle(color: Colors.white),
+                              )),
+                            ),
+                            Container(
+                              height: 50,
+                              width: screenSize.width / 12,
+                              child: Center(
+                                  child: Text(
+                                "Contact",
+                                style: TextStyle(color: Colors.white),
+                              )),
+                            ),
+                            Container(
+                              height: 50,
+                              width: screenSize.width / 12,
+                              child: Center(
+                                  child: Text(
+                                "About",
+                                style: TextStyle(color: Colors.white),
+                              )),
+                            ),
+                            Container(
+                              height: 50,
+                              width: screenSize.width / 12,
+                              child: Center(
+                                  child: Text(
+                                "Content",
+                                style: TextStyle(color: Colors.white),
+                              )),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
 
                 // Data Recovered n death covid19
                 Center(
                   child: Container(
                     margin: EdgeInsets.only(top: 861.0, bottom: 200),
-                    height: 120.0,
+                    height: 196.0,
                     width: screenSize.width / 1.08,
                     decoration: BoxDecoration(
                       color: Color(0xFFF7F7F7),
@@ -289,7 +292,8 @@ class HomePage extends StatelessWidget {
                                         Container(
                                           width: screenSize.width / 1.5,
                                           height: screenSize.width / 25,
-                                          color: Colors.green,
+                                          decoration: BoxDecoration(
+                                              color: Colors.green),
                                           child: Container(
                                             padding: EdgeInsets.all(
                                                 screenSize.width / 80),
@@ -303,12 +307,34 @@ class HomePage extends StatelessWidget {
                               ],
                             ),
                             Text(
-                                "Data keseluruhan kasus Covid-19 di Indonesia, sampai tanggal  20 September 2020")
+                                "Data keseluruhan kasus Covid-19 di Indonesia, sampai tanggal  20 September 2020"),
                           ],
                         ),
                       ],
                     ),
                   ),
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                Container(
+                  child: Text(
+                    'Gejala Covid-19',
+                    style: TextStyle(
+                        fontFamily: 'PoppinsMedium', color: Colors.grey),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(top: 10, bottom: 50),
+                  child: Text(
+                    'Gejala apa saja yang sering terjadi?',
+                    style: TextStyle(fontSize: 34, fontFamily: 'PoppinsMedium'),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(bottom: 50),
+                  child: SymptompContent(),
                 ),
               ],
             ),
