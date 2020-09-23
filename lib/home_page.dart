@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web/content_covid.dart';
+import 'package:flutter_web/mencegah_covid.dart';
 import 'package:flutter_web/symptom_covid.dart';
 
 class HomePage extends StatelessWidget {
@@ -160,14 +162,15 @@ class HomePage extends StatelessWidget {
                       ),
                       child: Center(
                         child: Container(
-                          height: screenSize.height / 14,
-                          width: screenSize.width / 5.2,
+                          height: screenSize.height / 8.5,
+                          width: screenSize.width / 6.16,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.0),
                             gradient: LinearGradient(
                               begin: Alignment.topLeft,
                               end: Alignment.bottomRight,
                               colors: <Color>[
+                                Color(0xFFFF6363),
                                 Color(0xFFFF6363),
                                 Color(0xFFFC8A8A),
                               ],
@@ -180,8 +183,8 @@ class HomePage extends StatelessWidget {
                               child: Text(
                                 'Learn More',
                                 style: TextStyle(
-                                  fontSize: screenSize.width / 75,
-                                  fontFamily: 'PoppinsMedium',
+                                  fontSize: screenSize.width / 80,
+                                  fontFamily: 'PoppinsSemiBold',
                                   color: Color(0xFFFFFFFF),
                                 ),
                               ),
@@ -265,8 +268,10 @@ class HomePage extends StatelessWidget {
                     child: Stack(
                       children: [
                         Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Center(
                                   child: Padding(
@@ -281,23 +286,93 @@ class HomePage extends StatelessWidget {
                                         Container(
                                           width: screenSize.width / 1.15,
                                           height: screenSize.width / 25,
-                                          color: Colors.red,
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(15.0),
+                                            gradient: LinearGradient(
+                                              begin: Alignment.topLeft,
+                                              end: Alignment.bottomRight,
+                                              colors: <Color>[
+                                                Color(0xFFFF6363),
+                                                Color(0xFFFF6363),
+                                                Color(0xFFFF6363),
+                                                Color(0xFFFF6363),
+                                                Color(0xFFFF6363),
+                                                Color(0xFFFF6363),
+                                                Color(0xFFFC8A8A),
+                                              ],
+                                            ),
+                                          ),
                                           child: Container(
-                                            padding: EdgeInsets.all(
-                                                screenSize.width / 89),
+                                            padding: EdgeInsets.only(
+                                                right: screenSize.width / 89),
                                             margin: EdgeInsets.only(left: 950),
-                                            child: Text("9448 Death"),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.end,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  "9.448",
+                                                  style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontFamily: 'PoppinsBold',
+                                                      fontSize: 18),
+                                                ),
+                                                Text(
+                                                  " Death",
+                                                  style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontFamily:
+                                                          'PoppinsRegular',
+                                                      fontSize: 18),
+                                                )
+                                              ],
+                                            ),
                                           ),
                                         ),
                                         Container(
                                           width: screenSize.width / 1.5,
                                           height: screenSize.width / 25,
                                           decoration: BoxDecoration(
-                                              color: Colors.green),
+                                            borderRadius:
+                                                BorderRadius.circular(15.0),
+                                            gradient: LinearGradient(
+                                              begin: Alignment.topLeft,
+                                              end: Alignment.bottomRight,
+                                              colors: <Color>[
+                                                Color(0xFF88CD43),
+                                                Color(0xFFA4DB6D),
+                                              ],
+                                            ),
+                                          ),
                                           child: Container(
-                                            padding: EdgeInsets.all(
-                                                screenSize.width / 80),
-                                            child: Text("170.448 Recovered"),
+                                            padding: EdgeInsets.only(
+                                                left: screenSize.width / 80),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  "170.448",
+                                                  style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontFamily: 'PoppinsBold',
+                                                      fontSize: 18),
+                                                ),
+                                                Text(
+                                                  " Recovered",
+                                                  style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontFamily:
+                                                          'PoppinsRegular',
+                                                      fontSize: 18),
+                                                )
+                                              ],
+                                            ),
                                           ),
                                         ),
                                       ],
@@ -306,9 +381,39 @@ class HomePage extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            Text(
-                                "Data keseluruhan kasus Covid-19 di Indonesia, sampai tanggal  20 September 2020"),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 40, top: 5),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Data keseluruhan kasus Covid-19 di Indonesia, sampai tanggal",
+                                    style: TextStyle(
+                                        color: Color(0xFF565656),
+                                        fontFamily: 'PoppinsRegular',
+                                        fontSize: 18),
+                                  ),
+                                  Text(
+                                    " 20 September 2020",
+                                    style: TextStyle(
+                                        color: Color(0xFF565656),
+                                        fontFamily: 'PoppinsBold',
+                                        fontSize: 18),
+                                  )
+                                ],
+                              ),
+                            ),
                           ],
+                        ),
+                        Positioned(
+                          left: 1180,
+                          child: Container(
+                            margin: EdgeInsets.only(top: 145),
+                            width: 215,
+                            height: 139,
+                            child:
+                                Image.asset('assets/images/pointer_image.png'),
+                          ),
                         ),
                       ],
                     ),
@@ -316,27 +421,63 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-            Column(
+            Stack(
               children: [
-                Container(
-                  child: Text(
-                    'Gejala Covid-19',
-                    style: TextStyle(
-                        fontFamily: 'PoppinsMedium', color: Colors.grey),
+                Positioned(
+                  left: 35,
+                  child: Container(
+                    margin: EdgeInsets.only(top: 110),
+                    width: 215,
+                    height: 139,
+                    child: Image.asset('assets/images/pointer_image.png'),
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.only(top: 10, bottom: 50),
-                  child: Text(
-                    'Gejala apa saja yang sering terjadi?',
-                    style: TextStyle(fontSize: 34, fontFamily: 'PoppinsMedium'),
+                Positioned(
+                  left: 1125,
+                  child: Container(
+                    margin: EdgeInsets.only(top: 425),
+                    width: 215,
+                    height: 139,
+                    child: Image.asset('assets/images/pointer_image.png'),
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(bottom: 50),
-                  child: SymptompContent(),
+                Column(
+                  children: [
+                    Container(
+                      child: Text(
+                        'GEJALA COVID-19',
+                        style: TextStyle(
+                          fontFamily: 'PoppinsSemiBold',
+                          fontSize: 14,
+                          color: Color(0xFFA7A7A7),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(top: 7, bottom: 78),
+                      child: Text(
+                        'Gejala apa saja yang sering terjadi?',
+                        style: TextStyle(
+                            fontSize: 34,
+                            color: Color(0xFF565656),
+                            fontFamily: 'PoppinsBold'),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 172),
+                      child: SymptompContent(),
+                    ),
+                  ],
                 ),
               ],
+            ),
+            Padding(
+              padding: EdgeInsets.only(bottom: 134),
+              child: MencegahCovid(),
+            ),
+            Padding(
+              padding: EdgeInsets.only(bottom: 92),
+              child: ContentCovid(),
             ),
           ],
         ),

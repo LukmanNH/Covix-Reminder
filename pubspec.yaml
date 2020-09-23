@@ -66,6 +66,12 @@ flutter:
     - family: PoppinsMedium
       fonts:
         - asset: assets/fonts/poppins/Poppins-Medium.ttf
+    - family: PoppinsRegular
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Regular.ttf
+    - family: PoppinsSemiBold
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-SemiBold.ttf
 
 
   # For details regarding fonts from package dependencies,
