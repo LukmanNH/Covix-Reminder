@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gradient_text/gradient_text.dart';
 
 class ContentCovid extends StatelessWidget {
   @override
@@ -163,14 +162,8 @@ class ContentCovid extends StatelessWidget {
                             height: 93,
                           ),
                           Expanded(
-                            child: GradientText(
+                            child: Text(
                               textContent * 2,
-                              gradient: LinearGradient(
-                                colors: [
-                                  Color(0xFFFFFFFF),
-                                  Color.fromRGBO(255, 255, 255, 0.5)
-                                ],
-                              ),
                               style: TextStyle(
                                   fontSize: 16,
                                   color: Colors.white,
