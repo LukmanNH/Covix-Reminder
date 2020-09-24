@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web/content_covid.dart';
+import 'package:flutter_web/donate_covid.dart';
 import 'package:flutter_web/mencegah_covid.dart';
 import 'package:flutter_web/symptom_covid.dart';
 
@@ -478,6 +479,10 @@ class HomePage extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(bottom: 92),
               child: ContentCovid(),
+            ),
+            Padding(
+              padding: EdgeInsets.only(bottom: 92),
+              child: DonateCovid(),
             ),
           ],
         ),
