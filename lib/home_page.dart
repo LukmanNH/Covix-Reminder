@@ -15,7 +15,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List _isHovering = [false, false, false, false, false];
   launchURL(String url) async {
     if (await canLaunch(url)) {
       await launch(url);
@@ -233,26 +232,22 @@ class _HomePageState extends State<HomePage> {
                         margin: EdgeInsets.only(
                             left: screenSize.width / 1.9, top: 20),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Container(
                               height: 50,
                               width: screenSize.width / 12,
                               child: Center(
                                 child: InkWell(
-                                  onHover: (value) {
-                                    setState(() {
-                                      _isHovering[0] = value;
-                                    });
-                                  },
                                   onTap: () => Scrollable.ensureVisible(
                                       home.currentContext),
                                   child: Text(
                                     "Home",
                                     style: TextStyle(
-                                        color: _isHovering[0]
-                                            ? Color(0xFFFC8A8A)
-                                            : Colors.white),
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontFamily: "PoppinsSemiBold",
+                                    ),
                                   ),
                                 ),
                               ),
@@ -262,19 +257,15 @@ class _HomePageState extends State<HomePage> {
                               width: screenSize.width / 12,
                               child: Center(
                                 child: InkWell(
-                                  onHover: (value) {
-                                    setState(() {
-                                      _isHovering[1] = value;
-                                    });
-                                  },
                                   onTap: () => Scrollable.ensureVisible(
                                       gejala.currentContext),
                                   child: Text(
-                                    "Symptomps",
+                                    "Gejala",
                                     style: TextStyle(
-                                        color: _isHovering[1]
-                                            ? Color(0xFFFC8A8A)
-                                            : Colors.white),
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontFamily: "PoppinsSemiBold",
+                                    ),
                                   ),
                                 ),
                               ),
@@ -284,19 +275,15 @@ class _HomePageState extends State<HomePage> {
                               width: screenSize.width / 12,
                               child: Center(
                                 child: InkWell(
-                                  onHover: (value) {
-                                    setState(() {
-                                      _isHovering[2] = value;
-                                    });
-                                  },
                                   onTap: () => Scrollable.ensureVisible(
                                       cegahCovid.currentContext),
                                   child: Text(
-                                    "Prevent Covid",
+                                    "Pencegahan",
                                     style: TextStyle(
-                                        color: _isHovering[2]
-                                            ? Color(0xFFFC8A8A)
-                                            : Colors.white),
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontFamily: "PoppinsSemiBold",
+                                    ),
                                   ),
                                 ),
                               ),
@@ -306,19 +293,15 @@ class _HomePageState extends State<HomePage> {
                               width: screenSize.width / 12,
                               child: Center(
                                 child: InkWell(
-                                  onHover: (value) {
-                                    setState(() {
-                                      _isHovering[3] = value;
-                                    });
-                                  },
                                   onTap: () => Scrollable.ensureVisible(
                                       article.currentContext),
                                   child: Text(
-                                    "Article",
+                                    "Artikel",
                                     style: TextStyle(
-                                        color: _isHovering[3]
-                                            ? Color(0xFFFC8A8A)
-                                            : Colors.white),
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontFamily: "PoppinsSemiBold",
+                                    ),
                                   ),
                                 ),
                               ),
@@ -328,19 +311,15 @@ class _HomePageState extends State<HomePage> {
                               width: screenSize.width / 12,
                               child: Center(
                                 child: InkWell(
-                                  onHover: (value) {
-                                    setState(() {
-                                      _isHovering[4] = value;
-                                    });
-                                  },
                                   onTap: () => Scrollable.ensureVisible(
                                       donate.currentContext),
                                   child: Text(
-                                    "Donate",
+                                    "Donasi",
                                     style: TextStyle(
-                                        color: _isHovering[4]
-                                            ? Color(0xFFFC8A8A)
-                                            : Colors.white),
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontFamily: "PoppinsSemiBold",
+                                    ),
                                   ),
                                 ),
                               ),
