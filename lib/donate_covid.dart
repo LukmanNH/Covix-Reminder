@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DonateCovid extends StatelessWidget {
+  launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -126,7 +135,11 @@ class DonateCovid extends StatelessWidget {
                         ),
                       ),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          const url =
+                              'https://kitabisa.com/campaign/indonesialawancorona';
+                          launchURL(url);
+                        },
                         child: Center(
                           child: Text(
                             'Donate',

@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MencegahCovid extends StatelessWidget {
+  launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -212,7 +221,10 @@ class MencegahCovid extends StatelessWidget {
                         ),
                       ),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          const url = 'https://t.me/covix_reminder';
+                          launchURL(url);
+                        },
                         child: Center(
                           child: Text(
                             'Covix Reminder',

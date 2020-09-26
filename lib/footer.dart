@@ -4,6 +4,7 @@ class Footer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
+
     return Container(
       width: screenSize.width,
       height: 295,

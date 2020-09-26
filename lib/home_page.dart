@@ -5,13 +5,30 @@ import 'package:flutter_web/footer.dart';
 import 'package:flutter_web/mencegah_covid.dart';
 import 'package:flutter_web/symptom_covid.dart';
 
+import 'package:url_launcher/url_launcher.dart';
+
 class HomePage extends StatelessWidget {
+  launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final dataKey = new GlobalKey();
+    final home = new GlobalKey();
+    final gejala = new GlobalKey();
+    final cegahCovid = new GlobalKey();
+    final article = new GlobalKey();
+    final donate = new GlobalKey();
     var screenSize = MediaQuery.of(context).size;
+
     return Scaffold(
       body: SingleChildScrollView(
+        key: home,
         child: Column(
           children: [
             // Sisi Kiri
@@ -179,8 +196,10 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           child: InkWell(
-                            onTap: () => Scrollable.ensureVisible(
-                                dataKey.currentContext),
+                            onTap: () {
+                              const url = 'https://t.me/covix_reminder';
+                              launchURL(url);
+                            },
                             child: Center(
                               child: Text(
                                 'Learn More',
@@ -212,36 +231,13 @@ class HomePage extends StatelessWidget {
                               height: 50,
                               width: screenSize.width / 12,
                               child: Center(
+                                child: InkWell(
+                                  onTap: () => Scrollable.ensureVisible(
+                                      home.currentContext),
                                   child: Text(
-                                "Home",
-                                style: TextStyle(color: Colors.white),
-                              )),
-                            ),
-                            Container(
-                              height: 50,
-                              width: screenSize.width / 12,
-                              child: Center(
-                                  child: Text(
-                                "Symptomps",
-                                style: TextStyle(color: Colors.white),
-                              )),
-                            ),
-                            Container(
-                              height: 50,
-                              width: screenSize.width / 12,
-                              child: Center(
-                                  child: Text(
-                                "Prevent Covid",
-                                style: TextStyle(color: Colors.white),
-                              )),
-                            ),
-                            Container(
-                              height: 50,
-                              width: screenSize.width / 12,
-                              child: Center(
-                                child: Text(
-                                  "Article",
-                                  style: TextStyle(color: Colors.white),
+                                    "Home",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
                                 ),
                               ),
                             ),
@@ -249,9 +245,55 @@ class HomePage extends StatelessWidget {
                               height: 50,
                               width: screenSize.width / 12,
                               child: Center(
-                                child: Text(
-                                  "Donate",
-                                  style: TextStyle(color: Colors.white),
+                                child: InkWell(
+                                  onTap: () => Scrollable.ensureVisible(
+                                      gejala.currentContext),
+                                  child: Text(
+                                    "Symptomps",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              height: 50,
+                              width: screenSize.width / 12,
+                              child: Center(
+                                child: InkWell(
+                                  onTap: () => Scrollable.ensureVisible(
+                                      cegahCovid.currentContext),
+                                  child: Text(
+                                    "Prevent Covid",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              height: 50,
+                              width: screenSize.width / 12,
+                              child: Center(
+                                child: InkWell(
+                                  onTap: () => Scrollable.ensureVisible(
+                                      article.currentContext),
+                                  child: Text(
+                                    "Article",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              height: 50,
+                              width: screenSize.width / 12,
+                              child: Center(
+                                child: InkWell(
+                                  onTap: () => Scrollable.ensureVisible(
+                                      donate.currentContext),
+                                  child: Text(
+                                    "Donate",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
                                 ),
                               ),
                             ),
@@ -455,6 +497,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 Column(
+                  key: gejala,
                   children: [
                     Container(
                       child: Text(
@@ -485,14 +528,17 @@ class HomePage extends StatelessWidget {
               ],
             ),
             Padding(
+              key: cegahCovid,
               padding: EdgeInsets.only(bottom: 134),
               child: MencegahCovid(),
             ),
             Padding(
+              key: article,
               padding: EdgeInsets.only(bottom: 0),
               child: ContentCovid(),
             ),
             Padding(
+              key: donate,
               padding: EdgeInsets.only(bottom: 0),
               child: DonateCovid(),
             ),

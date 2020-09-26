@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web/detail/article_cuci_tangan.dart';
+import 'package:flutter_web/detail/article_handsanitizer.dart';
+import 'package:flutter_web/detail/article_masker.dart';
 
 class ContentCovid extends StatelessWidget {
   @override
@@ -122,13 +124,22 @@ class ContentCovid extends StatelessWidget {
                           textAlign: TextAlign.center,
                         ),
                         SizedBox(height: 48),
-                        Text(
-                          'Learn More > ',
-                          style: TextStyle(
-                              fontSize: 16,
-                              color: Color(0xFFFFFFFF),
-                              fontFamily: "PoppinsSemiBold"),
-                          textAlign: TextAlign.center,
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DetailsHandsanitizer()),
+                            );
+                          },
+                          child: Text(
+                            'Learn More > ',
+                            style: TextStyle(
+                                fontSize: 16,
+                                color: Color(0xFFFFFFFF),
+                                fontFamily: "PoppinsSemiBold"),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ],
                     ),
@@ -159,7 +170,7 @@ class ContentCovid extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => DetailsCuciTangan()),
+                                  builder: (context) => DetailsMasker()),
                             );
                           },
                           child: Text(
