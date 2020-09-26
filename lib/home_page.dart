@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web/content_covid.dart';
 import 'package:flutter_web/donate_covid.dart';
+import 'package:flutter_web/footer.dart';
 import 'package:flutter_web/mencegah_covid.dart';
 import 'package:flutter_web/symptom_covid.dart';
 
@@ -57,7 +58,7 @@ class HomePage extends StatelessWidget {
                         bottomLeft: Radius.circular(40.0),
                       ),
                       child: Image.asset(
-                        'assets/images/doctor_mask.jpg',
+                        'assets/images/doctor_mask.png',
                         height: 754.0,
                         fit: BoxFit.cover,
                       ),
@@ -253,7 +254,7 @@ class HomePage extends StatelessWidget {
                 // Data Recovered n death covid19
                 Center(
                   child: Container(
-                    margin: EdgeInsets.only(top: 861.0, bottom: 200),
+                    margin: EdgeInsets.only(top: 861.0, bottom: 150),
                     height: 196.0,
                     width: screenSize.width / 1.08,
                     decoration: BoxDecoration(
@@ -477,13 +478,14 @@ class HomePage extends StatelessWidget {
               child: MencegahCovid(),
             ),
             Padding(
-              padding: EdgeInsets.only(bottom: 92),
+              padding: EdgeInsets.only(bottom: 0),
               child: ContentCovid(),
             ),
             Padding(
-              padding: EdgeInsets.only(bottom: 92),
+              padding: EdgeInsets.only(bottom: 0),
               child: DonateCovid(),
             ),
+            Footer(),
           ],
         ),
       ),

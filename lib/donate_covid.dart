@@ -3,149 +3,135 @@ import 'package:flutter/material.dart';
 class DonateCovid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
     return Container(
-      height: 2000,
-      color: Colors.white,
-      child: Column(
+      child: Row(
         children: [
-          Text(
-            'DONASI COVID-19',
-            style: TextStyle(
-                fontSize: 14,
-                fontFamily: "PoppinsMedium",
-                color: Color(0xFFA7A7A7)),
-          ),
-          Text(
-            'Mari berdonasi untuk korban covid 19!',
-            style: TextStyle(
-                fontSize: 34,
-                fontFamily: "PoppinsBold",
-                color: Color(0xFF565656)),
-          ),
-          SizedBox(
-            height: 90,
-          ),
-          Center(
-            child: Container(
-              width: 1200,
-              height: 556,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(15),
-                    topRight: Radius.circular(15),
-                    bottomLeft: Radius.circular(15),
-                    bottomRight: Radius.circular(15)),
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.3),
-                    blurRadius: 50,
-                    offset: Offset(0, 3),
+          Container(
+            height: 778,
+            width: screenSize.width / 2,
+            child: Stack(
+              children: [
+                Positioned(
+                  left: 127,
+                  child: Container(
+                    margin: EdgeInsets.only(top: 100),
+                    width: 325,
+                    height: 375,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15.0),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color(0x18000000).withOpacity(0.10),
+                          offset: Offset(0.0, 6.0),
+                          blurRadius: 50.0,
+                        ),
+                      ],
+                    ),
+                    child: Center(
+                        child: Image.asset('assets/images/cuci_tangan.png'),),
                   ),
-                ],
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Center(
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 50),
-                      child: Text(
-                        "Rp 1.740.000",
-                        style: TextStyle(
-                            fontSize: 80,
-                            fontFamily: "PoppinsBold",
-                            color: Color(0xFFFF6363)),
+                ),
+                Positioned(
+                  left: 233,
+                  child: Container(
+                    margin: EdgeInsets.only(top: 288),
+                    width: 325,
+                    height: 375,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15.0),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color(0x18000000).withOpacity(0.10),
+                          offset: Offset(0.0, 6.0),
+                          blurRadius: 50.0,
+                        ),
+                      ],
+                    ),
+                    child:
+                        Center(child: Image.asset('assets/images/masker.png')),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Stack(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 75),
+                height: 534,
+                width: screenSize.width / 2,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "DONASI COVID-19",
+                      style: TextStyle(
+                        fontFamily: 'PoppinsSemiBold',
+                        fontSize: 14,
+                        color: Color(0xFFA7A7A7),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 176,
-                  ),
-                  Row(
-                    children: [
-                      SizedBox(
-                        width: 40,
-                      ),
-                      Text(
-                        'Terkumpul ',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontFamily: "Poppins",
-                        ),
-                      ),
-                      Text(
-                        'Rp 174.000',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontFamily: "Poppins",
-                          color: Color(0xFFFF6363),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 48,
-                  ),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 40),
-                        child: Text(
-                          '534 ',
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontFamily: "PoppinsBold",
-                            color: Color(0xFF565656),
-                          ),
-                        ),
-                      ),
-                      Text(
-                        'Donasi ',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontFamily: "Poppins",
+                    SizedBox(
+                      height: 7,
+                    ),
+                    Text(
+                      "Mari berdonasi untuk korban\ncovid 19!",
+                      style: TextStyle(
+                          fontSize: 34,
                           color: Color(0xFF565656),
+                          fontFamily: 'PoppinsBold'),
+                    ),
+                    SizedBox(
+                      height: 32,
+                    ),
+                    Text(
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed\ndo eiusmod tempor incididunt ut labore et dolore magna\naliqua. Ut enim ad minim veniam, quis nostrud exercitation\nullamco laboris nisi ut aliquip ex ea commodo consequat.\nDuis aute irure dolor in reprehenderit in voluptate velit esse\ncillum dolore eu fugiat nulla pariatur. Excepteur sint\noccaecat cupidatat non proident, sunt in culpa qui officia\ndeserunt mollit anim id est laborum.",
+                      style: TextStyle(
+                          fontSize: 18,
+                          color: Color(0xFF676767),
+                          fontFamily: 'PoppinsMedium'),
+                    ),
+                    SizedBox(
+                      height: 57,
+                    ),
+                    Container(
+                      height: screenSize.height / 8.5,
+                      width: screenSize.width / 2.62,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8.0),
+                        gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: <Color>[
+                            Color(0xFFFF6363),
+                            Color(0xFFFF6363),
+                            Color(0xFFFC8A8A),
+                          ],
                         ),
                       ),
-                      SizedBox(
-                        width: 762,
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(right: 40),
-                        height: 70.31,
-                        width: 221.65,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8.0),
-                          gradient: LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: <Color>[
-                              Color(0xFFFF6363),
-                              Color(0xFFFF6363),
-                              Color(0xFFFC8A8A),
-                            ],
-                          ),
-                        ),
-                        child: InkWell(
-                          child: Center(
-                            child: Text(
-                              'Donate',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontFamily: 'PoppinsSemiBold',
-                                color: Color(0xFFFFFFFF),
-                              ),
+                      child: InkWell(
+                        onTap: () {},
+                        child: Center(
+                          child: Text(
+                            'Donate',
+                            style: TextStyle(
+                              fontSize: screenSize.width / 80,
+                              fontFamily: 'PoppinsSemiBold',
+                              color: Color(0xFFFFFFFF),
                             ),
                           ),
                         ),
                       ),
-                    ],
-                  ),
-                ],
+                    ),
+                  ],
+                ),
               ),
-            ),
-          )
+            ],
+          ),
         ],
       ),
     );
