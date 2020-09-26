@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web/detail/article_cuci_tangan.dart';
+import 'package:flutter_web/detail/article_masker.dart';
 import 'package:flutter_web/footer.dart';
 import 'package:flutter_web/home_page.dart';
 
@@ -200,11 +202,10 @@ class DetailsHandsanitizer extends StatelessWidget {
                           ),
                         ),
                         child: InkWell(
-                          // onTap: () {
-                          //   const url =
-                          //       'https://kitabisa.com/campaign/indonesialawancorona';
-                          //   launchURL(url);
-                          // },
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed(DetailsCuciTangan.route);
+                          },
                           child: Center(
                             child: Text(
                               'Read More',
@@ -286,11 +287,10 @@ class DetailsHandsanitizer extends StatelessWidget {
                           ),
                         ),
                         child: InkWell(
-                          // onTap: () {
-                          //   const url =
-                          //       'https://kitabisa.com/campaign/indonesialawancorona';
-                          //   launchURL(url);
-                          // },
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed(DetailsMasker.route);
+                          },
                           child: Center(
                             child: Text(
                               'Read More',
