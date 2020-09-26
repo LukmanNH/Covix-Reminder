@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web/footer.dart';
+import 'package:flutter_web/home_page.dart';
 
 class DetailsMasker extends StatelessWidget {
+  static const String route = '/detail-article-masker';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,8 +16,13 @@ class DetailsMasker extends StatelessWidget {
               padding: EdgeInsets.all(50),
               child: Center(
                 child: Container(
-                  child: Image.asset(
-                    "assets/images/logo3.png",
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).pushNamed(HomePage.route);
+                    },
+                    child: Image.asset(
+                      "assets/images/logo3.png",
+                    ),
                   ),
                 ),
               ),

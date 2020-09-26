@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web/footer.dart';
+import 'package:flutter_web/home_page.dart';
 
 class DetailsCuciTangan extends StatelessWidget {
+  static const String route = '/detail-article-cuci-tangan';
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -15,8 +17,13 @@ class DetailsCuciTangan extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(50),
               child: Center(
-                child: Container(
-                  child: Image.asset("assets/images/logo3.png"),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.of(context).pushNamed(HomePage.route);
+                  },
+                  child: Container(
+                    child: Image.asset("assets/images/logo3.png"),
+                  ),
                 ),
               ),
             ),

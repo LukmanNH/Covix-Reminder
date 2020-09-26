@@ -80,11 +80,8 @@ class ContentCovid extends StatelessWidget {
                         ),
                         InkWell(
                           onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => DetailsCuciTangan()),
-                            );
+                            Navigator.of(context)
+                                .pushNamed(DetailsCuciTangan.route);
                           },
                           child: Text(
                             'Learn More > ',
@@ -126,11 +123,8 @@ class ContentCovid extends StatelessWidget {
                         SizedBox(height: 48),
                         InkWell(
                           onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => DetailsHandsanitizer()),
-                            );
+                            Navigator.of(context)
+                                .pushNamed(DetailsHandsanitizer.route);
                           },
                           child: Text(
                             'Learn More > ',
@@ -167,11 +161,8 @@ class ContentCovid extends StatelessWidget {
                         SizedBox(height: 48),
                         InkWell(
                           onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => DetailsMasker()),
-                            );
+                            Navigator.of(context)
+                                .pushNamed(DetailsMasker.route);
                           },
                           child: Text(
                             'Learn More > ',

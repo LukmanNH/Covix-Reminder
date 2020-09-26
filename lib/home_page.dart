@@ -8,6 +8,8 @@ import 'package:flutter_web/symptom_covid.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatelessWidget {
+  static const String route = '';
+
   launchURL(String url) async {
     if (await canLaunch(url)) {
       await launch(url);
