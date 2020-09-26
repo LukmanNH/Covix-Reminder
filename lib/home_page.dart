@@ -7,9 +7,15 @@ import 'package:flutter_web/symptom_covid.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   static const String route = '';
 
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  List _isHovering = [false, false, false, false];
   launchURL(String url) async {
     if (await canLaunch(url)) {
       await launch(url);
@@ -234,11 +240,19 @@ class HomePage extends StatelessWidget {
                               width: screenSize.width / 12,
                               child: Center(
                                 child: InkWell(
+                                  onHover: (value) {
+                                    setState(() {
+                                      _isHovering[0] = value;
+                                    });
+                                  },
                                   onTap: () => Scrollable.ensureVisible(
                                       home.currentContext),
                                   child: Text(
                                     "Home",
-                                    style: TextStyle(color: Colors.white),
+                                    style: TextStyle(
+                                        color: _isHovering[0]
+                                            ? Color(0xFFFC8A8A)
+                                            : Colors.white),
                                   ),
                                 ),
                               ),
@@ -248,11 +262,19 @@ class HomePage extends StatelessWidget {
                               width: screenSize.width / 12,
                               child: Center(
                                 child: InkWell(
+                                  onHover: (value) {
+                                    setState(() {
+                                      _isHovering[1] = value;
+                                    });
+                                  },
                                   onTap: () => Scrollable.ensureVisible(
                                       gejala.currentContext),
                                   child: Text(
                                     "Symptomps",
-                                    style: TextStyle(color: Colors.white),
+                                    style: TextStyle(
+                                        color: _isHovering[1]
+                                            ? Color(0xFFFC8A8A)
+                                            : Colors.white),
                                   ),
                                 ),
                               ),
