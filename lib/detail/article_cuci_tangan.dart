@@ -154,6 +154,77 @@ class DetailsCuciTangan extends StatelessWidget {
                       ),
                     ],
                   ),
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.only(top: 20),
+                        width: 471,
+                        height: 230,
+                        child: Image.asset(
+                          'assets/images/jgnlupa.png',
+                        ),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Text(
+                        "Jangan lupa pakai masker",
+                        style: TextStyle(
+                          fontSize: 30,
+                          color: Color(0xFF565656),
+                          fontFamily: "PoppinsBold",
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            left: 60, right: 60, top: 20, bottom: 70),
+                        child: Text(
+                          "Pemerintah terus menghimbau dan meminta kepada masyarakat Indonesia untuk menggunakan masker...",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontFamily: "PoppinsRegular",
+                            color: Color(0xFF676767),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        height: screenSize.height / 12,
+                        width: screenSize.width / 2.82,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8.0),
+                          gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: <Color>[
+                              Color(0xFFFF6363),
+                              Color(0xFFFF6363),
+                              Color(0xFFFC8A8A),
+                            ],
+                          ),
+                        ),
+                        child: InkWell(
+                          // onTap: () {
+                          //   const url =
+                          //       'https://kitabisa.com/campaign/indonesialawancorona';
+                          //   launchURL(url);
+                          // },
+                          child: Center(
+                            child: Text(
+                              'Read More',
+                              style: TextStyle(
+                                fontSize: screenSize.width / 80,
+                                fontFamily: 'PoppinsSemiBold',
+                                color: Color(0xFFFFFFFF),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 Container(
                   // margin: EdgeInsets.all(30),
@@ -173,6 +244,7 @@ class DetailsCuciTangan extends StatelessWidget {
                   child: Column(
                     children: [
                       Container(
+                        padding: EdgeInsets.only(top: 20),
                         width: 471,
                         height: 230,
                         child: Image.asset(
@@ -197,12 +269,12 @@ class DetailsCuciTangan extends StatelessWidget {
                         padding: const EdgeInsets.only(
                             left: 60, right: 60, top: 20, bottom: 70),
                         child: Text(
-                          "Hand Sanitizer adalah cairan pembersih tangan yang digunakan sebagai alternatif untuk mencuci tangan selain menggunakan ...",
+                          "Hand Sanitizer adalah cairan pembersih tangan yang digunakan sebagai alternatif untuk mencuci tangan...",
                           style: TextStyle(
-                            fontSize: 16,
-                            fontFamily: "PoppinsBold",
+                            fontSize: 18,
+                            fontFamily: "PoppinsRegular",
+                            color: Color(0xFF676767),
                           ),
-                          textAlign: TextAlign.justify,
                         ),
                       ),
                       Container(
