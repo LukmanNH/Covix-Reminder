@@ -105,7 +105,7 @@ class DonateCovid extends StatelessWidget {
                     ),
                     Container(
                       width: 800,
-                      height: 268,
+                      height: 300,
                       margin: EdgeInsets.only(right: 120),
                       child: Text(
                         "Tak ada yang tahu pasti kapan pandemi ini akan berakhir. Tidak hanya kasus Covid-19 yang semakin hari semakin tinggi. Namun, ancaman bagi masyarakat menengah ke bawah pun menjadi dampaknya. Ayo kembali bersinergi!, Banyak masyarakat yang mengalami penurunan pendapatan, potongan gaji, bahkan ada yang berhenti sumber pemasukannya, lantaran kena PHK. Permasalahan ini, membuat Covix terus berusaha untuk meringankan beban mereka. Ayo bersama-sama kita membantu saudara kita yang membutuhkan pertolongan kita.",

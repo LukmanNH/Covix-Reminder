@@ -25,7 +25,7 @@ class Footer extends StatelessWidget {
                       color: Colors.white),
                 ),
                 Text(
-                  "Covix bertekad untuk membantu\nuntuk menjalan era new normal\ndengan nyaman.",
+                  "Covix bertekad untuk membantu\nuntuk menjalani era new normal\ndengan nyaman.",
                   style: TextStyle(
                       fontSize: 12,
                       fontFamily: "PoppinsRegular",

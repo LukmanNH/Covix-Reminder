@@ -15,7 +15,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List _isHovering = [false, false, false, false];
+  List _isHovering = [false, false, false, false, false];
   launchURL(String url) async {
     if (await canLaunch(url)) {
       await launch(url);
@@ -284,11 +284,19 @@ class _HomePageState extends State<HomePage> {
                               width: screenSize.width / 12,
                               child: Center(
                                 child: InkWell(
+                                  onHover: (value) {
+                                    setState(() {
+                                      _isHovering[2] = value;
+                                    });
+                                  },
                                   onTap: () => Scrollable.ensureVisible(
                                       cegahCovid.currentContext),
                                   child: Text(
                                     "Prevent Covid",
-                                    style: TextStyle(color: Colors.white),
+                                    style: TextStyle(
+                                        color: _isHovering[2]
+                                            ? Color(0xFFFC8A8A)
+                                            : Colors.white),
                                   ),
                                 ),
                               ),
@@ -298,11 +306,19 @@ class _HomePageState extends State<HomePage> {
                               width: screenSize.width / 12,
                               child: Center(
                                 child: InkWell(
+                                  onHover: (value) {
+                                    setState(() {
+                                      _isHovering[3] = value;
+                                    });
+                                  },
                                   onTap: () => Scrollable.ensureVisible(
                                       article.currentContext),
                                   child: Text(
                                     "Article",
-                                    style: TextStyle(color: Colors.white),
+                                    style: TextStyle(
+                                        color: _isHovering[3]
+                                            ? Color(0xFFFC8A8A)
+                                            : Colors.white),
                                   ),
                                 ),
                               ),
@@ -312,11 +328,19 @@ class _HomePageState extends State<HomePage> {
                               width: screenSize.width / 12,
                               child: Center(
                                 child: InkWell(
+                                  onHover: (value) {
+                                    setState(() {
+                                      _isHovering[4] = value;
+                                    });
+                                  },
                                   onTap: () => Scrollable.ensureVisible(
                                       donate.currentContext),
                                   child: Text(
                                     "Donate",
-                                    style: TextStyle(color: Colors.white),
+                                    style: TextStyle(
+                                        color: _isHovering[4]
+                                            ? Color(0xFFFC8A8A)
+                                            : Colors.white),
                                   ),
                                 ),
                               ),
