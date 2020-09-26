@@ -39,7 +39,7 @@ class MencegahCovid extends StatelessWidget {
                       ],
                     ),
                     child: Center(
-                        child: Image.asset('assets/images/cuci_tangan.png')),
+                        child: Image.asset('assets/images/icon_reminder.png')),
                   ),
                 ),
                 Positioned(

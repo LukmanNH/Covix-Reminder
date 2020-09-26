@@ -50,9 +50,9 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  left: screenSize.width / 1.8,
+                  left: screenSize.width / 2,
                   child: Container(
-                    width: screenSize.width / 2,
+                    width: screenSize.width / 1.6,
                     child: ClipRRect(
                       borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(40.0),
@@ -101,11 +101,11 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       child: Center(
-                        child: Text("Logo",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                            )),
+                        child: Container(
+                          width: 57,
+                          height: 57,
+                          child: Image.asset('assets/images/logo2.png'),
+                        ),
                       ),
                     ),
                     SizedBox(
@@ -131,7 +131,7 @@ class HomePage extends StatelessWidget {
                             height: 40,
                           ),
                           Text(
-                            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+                            "Ayo! kita lawan Covid-19 bersama Covix Reminder, kami\nakan selalu mengingatkan anda dimanapun dan kapanpun\nAnda berada.",
                             textAlign: TextAlign.start,
                             style: TextStyle(
                               fontSize: 16,
@@ -204,9 +204,9 @@ class HomePage extends StatelessWidget {
                     children: [
                       Container(
                         margin: EdgeInsets.only(
-                            left: screenSize.width / 1.8, top: 20),
+                            left: screenSize.width / 1.9, top: 20),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Container(
                               height: 50,
@@ -222,7 +222,7 @@ class HomePage extends StatelessWidget {
                               width: screenSize.width / 12,
                               child: Center(
                                   child: Text(
-                                "Contact",
+                                "Symptomps",
                                 style: TextStyle(color: Colors.white),
                               )),
                             ),
@@ -231,7 +231,7 @@ class HomePage extends StatelessWidget {
                               width: screenSize.width / 12,
                               child: Center(
                                   child: Text(
-                                "About",
+                                "Prevent Covid",
                                 style: TextStyle(color: Colors.white),
                               )),
                             ),
@@ -239,10 +239,21 @@ class HomePage extends StatelessWidget {
                               height: 50,
                               width: screenSize.width / 12,
                               child: Center(
-                                  child: Text(
-                                "Content",
-                                style: TextStyle(color: Colors.white),
-                              )),
+                                child: Text(
+                                  "Article",
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              height: 50,
+                              width: screenSize.width / 12,
+                              child: Center(
+                                child: Text(
+                                  "Donate",
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
                             ),
                           ],
                         ),

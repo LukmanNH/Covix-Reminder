@@ -17,14 +17,14 @@ class Footer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Odading Team",
+                  "Covix",
                   style: TextStyle(
                       fontSize: 25,
                       fontFamily: "PoppinsBold",
                       color: Colors.white),
                 ),
                 Text(
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting\nindustry. Lorem Ipsum has been the industry's standard dummy text\never since the 1500s,",
+                  "Covix bertekad untuk membantu\nuntuk menjalan era new normal\ndengan nyaman.",
                   style: TextStyle(
                       fontSize: 12,
                       fontFamily: "PoppinsRegular",
@@ -33,35 +33,66 @@ class Footer extends StatelessWidget {
                 SizedBox(
                   height: 46,
                 ),
-                Row(
-                  children: [
-                    Icon(
-                      Icons.account_balance,
-                      color: Colors.white,
-                    ),
-                    Icon(
-                      Icons.account_balance,
-                      color: Colors.white,
-                    ),
-                    Icon(
-                      Icons.account_balance,
-                      color: Colors.white,
-                    ),
-                    Icon(
-                      Icons.account_balance,
-                      color: Colors.white,
-                    ),
-                    Icon(
-                      Icons.account_balance,
-                      color: Colors.white,
-                    )
-                  ],
-                ),
                 SizedBox(
                   height: 46,
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text(
+                      "Term of Services",
+                      style: TextStyle(
+                          fontSize: 12,
+                          fontFamily: "PoppinsRegular",
+                          color: Colors.white),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Privacy & policy",
+                      style: TextStyle(
+                          fontSize: 12,
+                          fontFamily: "PoppinsRegular",
+                          color: Colors.white),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
                 Text(
-                  "Copyright 2020 Travel",
+                  "Contributor",
+                  style: TextStyle(
+                      fontSize: 25,
+                      fontFamily: "PoppinsBold",
+                      color: Colors.white),
+                ),
+                Text(
+                  "Lukman Nur Hakim",
+                  style: TextStyle(
+                      fontSize: 12,
+                      fontFamily: "PoppinsRegular",
+                      color: Colors.white),
+                ),
+                Text(
+                  "Alif Babrizq",
+                  style: TextStyle(
+                      fontSize: 12,
+                      fontFamily: "PoppinsRegular",
+                      color: Colors.white),
+                ),
+                Text(
+                  "Raihan Ahnaf",
+                  style: TextStyle(
+                      fontSize: 12,
+                      fontFamily: "PoppinsRegular",
+                      color: Colors.white),
+                ),
+                Text(
+                  "Galih Putra",
                   style: TextStyle(
                       fontSize: 12,
                       fontFamily: "PoppinsRegular",
@@ -72,103 +103,52 @@ class Footer extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Projects",
-                  style: TextStyle(
-                      fontSize: 25,
-                      fontFamily: "PoppinsBold",
-                      color: Colors.white),),
-                Text("WHMCS-bridge",style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: "PoppinsRegular",
-                      color: Colors.white),),
-                Text("Search Domain",style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: "PoppinsRegular",
-                      color: Colors.white),),
-                Text("My Account",style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: "PoppinsRegular",
-                      color: Colors.white),),
-                Text("Shopping Cart",style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: "PoppinsRegular",
-                      color: Colors.white),),
-                Text("Our Shopp",style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: "PoppinsRegular",
-                      color: Colors.white),)
-              ],
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text("Contact us",
-                  style: TextStyle(
-                      fontSize: 25,
-                      fontFamily: "PoppinsBold",
-                      color: Colors.white),),
-                Text("Address : C-308  New Delhi",style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: "PoppinsRegular",
-                      color: Colors.white),),
-                Text("Phone : +91 9876543210",style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: "PoppinsRegular",
-                      color: Colors.white),),
-                Text("Email : info@colorlib.com",style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: "PoppinsRegular",
-                      color: Colors.white),),
-              ],
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text("Newsletter",
-                  style: TextStyle(
-                      fontSize: 25,
-                      fontFamily: "PoppinsBold",
-                      color: Colors.white),),
                 Text(
-                    "Lorem Ipsum is simply dummy\ntext of the printing and\ntypesetting industry.",style: TextStyle(
+                  "Contact us",
+                  style: TextStyle(
+                      fontSize: 25,
+                      fontFamily: "PoppinsBold",
+                      color: Colors.white),
+                ),
+                Text(
+                  "Phone : +62 812-9724-2408",
+                  style: TextStyle(
                       fontSize: 12,
                       fontFamily: "PoppinsRegular",
-                      color: Colors.white),),
-                      SizedBox(height: 30,),
-                Container(
-                  color: Colors.white,
-                  height: 20.11,
-                  width: 140.03,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Enter Email ID",style: TextStyle(
-                      fontSize: 10,
-                      fontFamily: "PoppinsRegular",
-                      color: Colors.black),
-                      ),
-                      Text(
-                        "Subscribe",style: TextStyle(
-                      fontSize: 10,
-                      fontFamily: "PoppinsMedium",
-                      color: Color(0xFFFF6363)),
-                      ),
-                    ],
-                  ),
+                      color: Colors.white),
                 ),
-                SizedBox(height: 40,),
+                Text(
+                  "Email : official.covix@gmail.com",
+                  style: TextStyle(
+                      fontSize: 12,
+                      fontFamily: "PoppinsRegular",
+                      color: Colors.white),
+                ),
+              ],
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: 143,
+                  height: 143,
+                  child: Image.asset("assets/images/logo2.png"),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
                 Row(
                   children: [
-                    Text("Term of Services",style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: "PoppinsRegular",
-                      color: Colors.white),),
-                      SizedBox(width: 15),
-                    Text("Privacy & policy",style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: "PoppinsRegular",
-                      color: Colors.white),),
+                    Container(
+                      child: Text(
+                        "Covix by OdadingTeam - 2020",
+                        style: TextStyle(
+                            fontSize: 12,
+                            fontFamily: "PoppinsRegular",
+                            color: Colors.white),
+                      ),
+                    ),
+                    SizedBox(width: 15),
                   ],
                 ),
               ],

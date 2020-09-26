@@ -29,8 +29,11 @@ class DonateCovid extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: Center(
-                        child: Image.asset('assets/images/cuci_tangan.png'),),
+                    child: Image.asset(
+                      'assets/images/donate.jpg',
+                      fit: BoxFit.cover,
+                      height: 375,
+                    ),
                   ),
                 ),
                 Positioned(
@@ -50,8 +53,11 @@ class DonateCovid extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child:
-                        Center(child: Image.asset('assets/images/masker.png')),
+                    child: Image.asset(
+                      'assets/images/y.jpg',
+                      height: 350,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ],
@@ -61,7 +67,7 @@ class DonateCovid extends StatelessWidget {
             children: [
               Container(
                 padding: EdgeInsets.only(left: 75),
-                height: 534,
+                height: 600,
                 width: screenSize.width / 2,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -86,21 +92,27 @@ class DonateCovid extends StatelessWidget {
                           fontFamily: 'PoppinsBold'),
                     ),
                     SizedBox(
-                      height: 32,
-                    ),
-                    Text(
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed\ndo eiusmod tempor incididunt ut labore et dolore magna\naliqua. Ut enim ad minim veniam, quis nostrud exercitation\nullamco laboris nisi ut aliquip ex ea commodo consequat.\nDuis aute irure dolor in reprehenderit in voluptate velit esse\ncillum dolore eu fugiat nulla pariatur. Excepteur sint\noccaecat cupidatat non proident, sunt in culpa qui officia\ndeserunt mollit anim id est laborum.",
-                      style: TextStyle(
-                          fontSize: 18,
-                          color: Color(0xFF676767),
-                          fontFamily: 'PoppinsMedium'),
-                    ),
-                    SizedBox(
-                      height: 57,
+                      height: 5,
                     ),
                     Container(
-                      height: screenSize.height / 8.5,
-                      width: screenSize.width / 2.62,
+                      width: 800,
+                      height: 268,
+                      margin: EdgeInsets.only(right: 120),
+                      child: Text(
+                        "Tak ada yang tahu pasti kapan pandemi ini akan berakhir. Tidak hanya kasus Covid-19 yang semakin hari semakin tinggi. Namun, ancaman bagi masyarakat menengah ke bawah pun menjadi dampaknya. Ayo kembali bersinergi!, Banyak masyarakat yang mengalami penurunan pendapatan, potongan gaji, bahkan ada yang berhenti sumber pemasukannya, lantaran kena PHK. Permasalahan ini, membuat Covix terus berusaha untuk meringankan beban mereka. Ayo bersama-sama kita membantu saudara kita yang membutuhkan pertolongan kita.",
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Color(0xFF676767),
+                            fontFamily: 'PoppinsMedium'),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 38,
+                    ),
+                    Container(
+                      height: screenSize.height / 12,
+                      width: screenSize.width / 2.82,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         gradient: LinearGradient(

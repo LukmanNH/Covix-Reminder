@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web/detail/article_cuci_tangan.dart';
 
 class ContentCovid extends StatelessWidget {
   @override
@@ -75,12 +76,21 @@ class ContentCovid extends StatelessWidget {
                         SizedBox(
                           height: 20,
                         ),
-                        Text(
-                          'Learn More > ',
-                          style: TextStyle(
-                              fontSize: 16,
-                              color: Color(0xFFFFFFFF),
-                              fontFamily: "PoppinsSemiBold"),
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DetailsCuciTangan()),
+                            );
+                          },
+                          child: Text(
+                            'Learn More > ',
+                            style: TextStyle(
+                                fontSize: 16,
+                                color: Color(0xFFFFFFFF),
+                                fontFamily: "PoppinsSemiBold"),
+                          ),
                         )
                       ],
                     ),
@@ -98,30 +108,30 @@ class ContentCovid extends StatelessWidget {
                 height: 551,
                 child: Stack(
                   children: [
-                    Image.asset('assets/images/artikel2.png'),
+                    Image.asset('assets/images/sabun.png'),
                     Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Jangan Lupa\nsunat",
-                            style: TextStyle(
-                                fontSize: 48,
-                                color: Color(0xFFFFFFFF),
-                                fontFamily: "PoppinsBold"),
-                            textAlign: TextAlign.center,
-                          ),
-                          SizedBox(height: 48),
-                          Text(
-                            'Learn More > ',
-                            style: TextStyle(
-                                fontSize: 16,
-                                color: Color(0xFFFFFFFF),
-                                fontFamily: "PoppinsSemiBold"),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
-                      ),
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Selalu Bawa\nHand Sanitizer",
+                          style: TextStyle(
+                              fontSize: 48,
+                              color: Color(0xFFFFFFFF),
+                              fontFamily: "PoppinsBold"),
+                          textAlign: TextAlign.center,
+                        ),
+                        SizedBox(height: 48),
+                        Text(
+                          'Learn More > ',
+                          style: TextStyle(
+                              fontSize: 16,
+                              color: Color(0xFFFFFFFF),
+                              fontFamily: "PoppinsSemiBold"),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
@@ -132,45 +142,42 @@ class ContentCovid extends StatelessWidget {
                   children: [
                     Image.asset('assets/images/artikel2.png'),
                     Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Jangan Lupa\npakai Masker :) ",
-                            style: TextStyle(
-                                fontSize: 48,
-                                color: Color(0xFFFFFFFF),
-                                fontFamily: "PoppinsBold"),
-                                textAlign: TextAlign.center,
-                          ),
-                          SizedBox(height: 48),
-                          Text(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Jangan Lupa\npakai Masker",
+                          style: TextStyle(
+                              fontSize: 48,
+                              color: Color(0xFFFFFFFF),
+                              fontFamily: "PoppinsBold"),
+                          textAlign: TextAlign.center,
+                        ),
+                        SizedBox(height: 48),
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DetailsCuciTangan()),
+                            );
+                          },
+                          child: Text(
                             'Learn More > ',
                             style: TextStyle(
                                 fontSize: 16,
                                 color: Color(0xFFFFFFFF),
                                 fontFamily: "PoppinsSemiBold"),
-                                textAlign: TextAlign.center,
+                            textAlign: TextAlign.center,
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 50),
-            child: Center(
-                child: Text(
-              "SEE MORE",
-              style: TextStyle(
-                  color: Color(0xFFFF6363),
-                  fontFamily: "PoppinsSemiBold",
-                  decoration: TextDecoration.underline,
-                  fontSize: 18),
-            )),
-          )
         ],
       ),
     );
